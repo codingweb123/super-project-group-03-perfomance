@@ -13,7 +13,7 @@ const getTopBooks = async () => {
 	return data
 }
 
-const getBooksByCategory = async (category: string) => {
+const getBooksByCategory = async category => {
 	const { data } = await axios("category", {
 		params: {
 			category,
