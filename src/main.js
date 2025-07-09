@@ -1,3 +1,4 @@
+import "./js/cursor"
 import "./js/header"
 import "./js/hero"
 import "./js/books"
