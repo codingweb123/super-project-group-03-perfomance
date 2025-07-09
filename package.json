@@ -5,18 +5,21 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --base=/super-project-group-03/",
+    "build": "vite build --base=/super-project-group-03-perfomance/",
     "preview": "vite preview"
   },
   "devDependencies": {
     "glob": "^11.0.0",
     "postcss": "^8.4.41",
     "postcss-sort-media-queries": "^5.2.0",
-    "vite": "^5.4.6"
+    "vite": "^5.4.6",
+    "vite-plugin-dynamic-import": "^1.6.0",
+    "vite-plugin-minify": "^2.1.0"
   },
   "author": "Alexander Repeta <alexander.repeta@gmail.com>",
   "license": "ISC",
   "dependencies": {
+    "accordion-js": "^3.4.1",
     "axios": "^1.10.0",
     "izitoast": "^1.4.0",
     "swiper": "^11.2.10",
