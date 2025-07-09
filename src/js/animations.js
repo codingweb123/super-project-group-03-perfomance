@@ -139,7 +139,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			trigger: ".location",
 			start: "center center",
 		},
-		delay: 0.6,
+		delay: 0.3,
 		ease: "power1.inOut",
 	})
 	locationTL.from(".location .loc-sec", { x: -45, opacity: 0, duration: 0.15 })
