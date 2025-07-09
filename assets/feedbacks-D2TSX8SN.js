@@ -1,0 +1,2 @@
+import{b as e,N as a,P as i,K as s}from"./heavy-vendor-DzA-cfM-.js";const n=document.querySelector(".feedbacks-swiper");n&&new e(".feedbacks-swiper",{modules:[a,i,s],slidesPerView:3,spaceBetween:24,pagination:{el:".swiper-pagination",clickable:!0},navigation:{nextEl:".feedbacks-btn-next",prevEl:".feedbacks-btn-prev"},keyboard:{enabled:!0},breakpoints:{0:{slidesPerView:1,spaceBetween:24},768:{slidesPerView:2,spaceBetween:24},1440:{slidesPerView:3,spaceBetween:24}}});
+//# sourceMappingURL=feedbacks-D2TSX8SN.js.map

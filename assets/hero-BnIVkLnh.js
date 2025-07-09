@@ -1,0 +1,2 @@
+import{b as t,N as a,A as r,K as s}from"./heavy-vendor-DzA-cfM-.js";document.querySelectorAll("img[data-src]").forEach(e=>e.setAttribute("src",e.dataset.src));document.querySelectorAll("source[data-srcset]").forEach(e=>e.setAttribute("srcset",e.dataset.srcset));new t(".hero .swiper",{modules:[a,r,s],slidesPerView:1,spaceBetween:20,keyboard:{enabled:!0},autoplay:{delay:3e3,disableOnInteraction:!0},navigation:{nextEl:".right-btn",prevEl:".left-btn"}});document.body.classList.remove("c-loading");
+//# sourceMappingURL=hero-BnIVkLnh.js.map
