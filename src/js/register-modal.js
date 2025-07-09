@@ -1,7 +1,7 @@
 import { refs } from "./refs"
 import { hideRegisterModal } from "./helpers"
 import iziToast from "izitoast"
-import "izitoast/dist/css/iziToast.min.css"
+import("izitoast/dist/css/iziToast.min.css", { assert: { type: 'css' } })
 
 const registerModalFormEl = document.querySelector(".register-form")
 const registerCloseBtn = document.querySelector(".register-modal-close")

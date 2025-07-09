@@ -41,14 +41,14 @@ export default defineConfig(({ command }) => {
 		},
 		plugins: [
 			injectHTML(),
-			ViteMinifyPlugin({}),
 			dynamicImport({
 				filter(id) {
-					if (id.includes("/node_modules")) {
+					if (id.includes("/node_modules/")) {
 						return true
 					}
 				},
 			}),
+			ViteMinifyPlugin({}),
 			FullReload(["./src/**/**.html"]),
 			SortCss({
 				sort: "mobile-first",
