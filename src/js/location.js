@@ -1,10 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
-	setTimeout(() => {
-		document
-			.querySelectorAll("iframe[data-src]")
-			.forEach(iframe => iframe.setAttribute("src", iframe.dataset.src))
-	}, 800)
-})
+document
+	.querySelectorAll("iframe[data-src]")
+	.forEach(iframe => iframe.setAttribute("src", iframe.dataset.src))
 
 const scrollBtn = document.querySelector("#scrollToTopBtn")
 

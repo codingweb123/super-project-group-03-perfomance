@@ -7,23 +7,21 @@ import { refs } from "./refs"
 const { registerModal } = refs
 Swiper.use([Navigation, Pagination, Keyboard])
 
-document.addEventListener("DOMContentLoaded", () => {
-	const registerLinks = document.querySelectorAll(".event-register")
+const registerLinks = document.querySelectorAll(".event-register")
 
-	registerLinks.forEach(link => {
-		link.addEventListener("click", e => {
-			e.preventDefault()
-			document.body.style.overflow = "hidden"
-			openRegisterModal()
-		})
+registerLinks.forEach(link => {
+	link.addEventListener("click", e => {
+		e.preventDefault()
+		document.body.style.overflow = "hidden"
+		openRegisterModal()
 	})
+})
 
-	registerModal.addEventListener("click", e => {
-		if (e.target === e.currentTarget) {
-			document.body.style.overflow = "unset"
-			hideRegisterModal()
-		}
-	})
+registerModal.addEventListener("click", e => {
+	if (e.target === e.currentTarget) {
+		document.body.style.overflow = "unset"
+		hideRegisterModal()
+	}
 })
 
 new Swiper(".events .swiper", {

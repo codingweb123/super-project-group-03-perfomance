@@ -1,5 +1,7 @@
 /* HERO */
-
+body.c-loading .hero .swiper-slide:not(:first-child) {
+	display: none;
+}
 .hero {
 	padding-top: 0;
 }

@@ -130,27 +130,25 @@ const renderTopBooks = async () => {
 		})
 }
 
-document.addEventListener("DOMContentLoaded", async () => {
-	renderLoadingTexts(categories)
-	setTimeout(async () => {
-		getCategoryList()
-			.then(data => {
-				removeRenderLoading(categories)
-				categories.innerHTML += data.reduce(
-					(acc, { list_name }) => (acc += !list_name ? "" : `<li>${list_name}`),
-					""
-				)
-			})
-			.catch(() => {
-				iziToast.error({ message: "Error while getting data from categories!" })
-			})
-		try {
-			await renderTopBooks()
-		} catch {
-			iziToast.error({ message: "Error while getting books data!" })
-		}
-	}, 1000)
-})
+renderLoadingTexts(categories)
+setTimeout(async () => {
+	getCategoryList()
+		.then(data => {
+			removeRenderLoading(categories)
+			categories.innerHTML += data.reduce(
+				(acc, { list_name }) => (acc += !list_name ? "" : `<li>${list_name}`),
+				""
+			)
+		})
+		.catch(() => {
+			iziToast.error({ message: "Error while getting data from categories!" })
+		})
+	try {
+		await renderTopBooks()
+	} catch {
+		iziToast.error({ message: "Error while getting books data!" })
+	}
+}, 1000)
 
 categoryBtn.addEventListener("click", () => {
 	categories.classList.toggle("active")

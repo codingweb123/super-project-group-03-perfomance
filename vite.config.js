@@ -4,6 +4,7 @@ import injectHTML from "vite-plugin-html-inject"
 import FullReload from "vite-plugin-full-reload"
 import SortCss from "postcss-sort-media-queries"
 import { ViteMinifyPlugin } from "vite-plugin-minify"
+import dynamicImport from "vite-plugin-dynamic-import"
 
 export default defineConfig(({ command }) => {
 	return {
@@ -18,7 +19,7 @@ export default defineConfig(({ command }) => {
 				output: {
 					manualChunks(id) {
 						if (id.includes("node_modules")) {
-							return "vendor"
+							return "heavy-vendor"
 						}
 					},
 					entryFileNames: chunkInfo => {
@@ -40,6 +41,7 @@ export default defineConfig(({ command }) => {
 		},
 		plugins: [
 			injectHTML(),
+			dynamicImport(),
 			ViteMinifyPlugin({}),
 			FullReload(["./src/**/**.html"]),
 			SortCss({

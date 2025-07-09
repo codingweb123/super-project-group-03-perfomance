@@ -2,16 +2,12 @@ import Swiper from "swiper"
 import { Autoplay, Keyboard, Navigation } from "swiper/modules"
 import "swiper/swiper-bundle.css"
 
-document.addEventListener("DOMContentLoaded", () => {
-	setTimeout(() => {
-		document
-			.querySelectorAll("img[data-src]")
-			.forEach(i => i.setAttribute("src", i.dataset.src))
-		document
-			.querySelectorAll("source[data-srcset]")
-			.forEach(i => i.setAttribute("srcset", i.dataset.srcset))
-	}, 800)
-})
+document
+	.querySelectorAll("img[data-src]")
+	.forEach(i => i.setAttribute("src", i.dataset.src))
+document
+	.querySelectorAll("source[data-srcset]")
+	.forEach(i => i.setAttribute("srcset", i.dataset.srcset))
 
 new Swiper(".hero .swiper", {
 	modules: [Navigation, Autoplay, Keyboard],
@@ -29,3 +25,5 @@ new Swiper(".hero .swiper", {
 		prevEl: ".left-btn",
 	},
 })
+
+document.body.classList.remove("c-loading")
