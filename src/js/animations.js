@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	let locationTL = gsap.timeline({
 		scrollTrigger: {
 			trigger: ".location",
-			start: "center center",
+			start: "top 10%"
 		},
 		delay: 0.15,
 		ease: "power1.inOut",
