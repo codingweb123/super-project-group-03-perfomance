@@ -139,12 +139,13 @@ document.addEventListener("DOMContentLoaded", () => {
 			trigger: ".location",
 			start: "center center",
 		},
-		delay: 0.3,
+		delay: 0.15,
 		ease: "power1.inOut",
 	})
 	locationTL.from(".location .loc-sec", { x: -45, opacity: 0, duration: 0.15 })
 	locationTL.from(".location h2", { x: -45, opacity: 0, duration: 0.15 })
 	locationTL.from(".location .loc-text", { x: -45, opacity: 0, duration: 0.15 })
+    locationTL.from(".location iframe", { y: -115, opacity: 0, duration: 0.2 })
 	gsap.utils.toArray(".location .loc-link").forEach(item => {
 		locationTL.from(item, {
 			x: 45,
@@ -153,7 +154,6 @@ document.addEventListener("DOMContentLoaded", () => {
 			duration: 0.15,
 		})
 	})
-	locationTL.from(".location iframe", { y: -115, opacity: 0, duration: 0.4 })
 	let footerTL = gsap.timeline({
 		scrollTrigger: {
 			trigger: ".footer",
