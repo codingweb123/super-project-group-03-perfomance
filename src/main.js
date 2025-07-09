@@ -1,10 +1,11 @@
-import("./js/header")
-import("./js/hero")
-import("./js/books")
-import("./js/feedbacks")
-import("./js/events")
-import("./js/footer")
-import("./js/book-modal")
-import("./js/location")
-import("./js/register-modal")
-import("./js/menu-overlay")
+import "./js/header"
+import "./js/hero"
+import "./js/books"
+import "./js/feedbacks"
+import "./js/events"
+import "./js/footer"
+import "./js/book-modal"
+import "./js/location"
+import "./js/register-modal"
+import "./js/menu-overlay"
+import "./js/animations"

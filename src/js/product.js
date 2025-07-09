@@ -1,5 +1,5 @@
 import iziToast from "izitoast"
-import("izitoast/dist/css/iziToast.min.css", { assert: { type: 'css' } })
+import "izitoast/dist/css/iziToast.min.css"
 
 const LS_KEY = "product"
 

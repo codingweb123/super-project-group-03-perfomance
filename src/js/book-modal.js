@@ -1,7 +1,7 @@
 import { getBookByID } from "./api"
 import Accordion from "accordion-js"
 import iziToast from "izitoast"
-import("izitoast/dist/css/iziToast.min.css", { assert: { type: 'css' } })
+import "izitoast/dist/css/iziToast.min.css"
 
 import { hideBookModal, openBookModal } from "./helpers"
 

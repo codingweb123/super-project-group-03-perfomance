@@ -1,8 +1,9 @@
 import iziToast from "izitoast"
-import("izitoast/dist/css/iziToast.min.css", { assert: { type: 'css' } })
+import "izitoast/dist/css/iziToast.min.css"
 import { refs } from "./refs"
 import { getBooksByCategory, getCategoryList, getTopBooks } from "./api"
 import { loadBookModal } from "./book-modal"
+import { ScrollTrigger } from "gsap/ScrollTrigger"
 
 const { books } = refs
 
@@ -32,18 +33,19 @@ const renderBooks = books => {
 	booksList.innerHTML = books.reduce(
 		(a, { _id, book_image, title, price, author }) =>
 			(a += `
-    <li>
-        <img
-            src="${book_image}"
-			loading="lazy"
-            alt="${title}"
-        />
-        <h3><b>${title}</b><span class="price">$${price}</span></h3>
-        <p class="author">${author}</p>
-        <button class="btn" data-bookid="${_id}">Learn More</button>
-    </li>`),
+				<li>
+				<img
+				src="${book_image}"
+				loading="lazy"
+				alt="${title}"
+				/>
+				<h3><b>${title}</b><span class="price">$${price}</span></h3>
+				<p class="author">${author}</p>
+				<button class="btn" data-bookid="${_id}">Learn More</button>
+				</li>`),
 		""
 	)
+	ScrollTrigger.refresh()
 }
 const renderNewBooks = books => {
 	booksList.innerHTML += books.reduce(
@@ -69,7 +71,6 @@ const sliceFirstBooksByPage = (books, page = 0) => {
 	return books.slice(page * numberToPaginate(), (page + 1) * numberToPaginate())
 }
 const setPaginationNumber = (books, value) => {
-	console.log(paginationNum.textContent)
 	paginationNum.textContent =
 		books.length < value ? books.length.toString() : value.toString()
 }
@@ -202,7 +203,6 @@ moreButton.addEventListener("click", e => {
 	moreButton.disabled = true
 	const alreadyShown = numberToPaginate() + page * paginationNumber
 	const remaining = renderedBooks.length - alreadyShown
-	console.log(remaining)
 	if (remaining > 0) {
 		const slice = sliceBooksByPage(renderedBooks, page)
 		renderNewBooks(slice)

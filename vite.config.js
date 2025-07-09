@@ -3,7 +3,6 @@ import { glob } from "glob"
 import injectHTML from "vite-plugin-html-inject"
 import FullReload from "vite-plugin-full-reload"
 import SortCss from "postcss-sort-media-queries"
-import dynamicImport from "vite-plugin-dynamic-import"
 import { ViteMinifyPlugin } from "vite-plugin-minify"
 
 export default defineConfig(({ command }) => {
@@ -41,13 +40,6 @@ export default defineConfig(({ command }) => {
 		},
 		plugins: [
 			injectHTML(),
-			dynamicImport({
-				filter(id) {
-					if (id.includes("/node_modules/")) {
-						return true
-					}
-				},
-			}),
 			ViteMinifyPlugin({}),
 			FullReload(["./src/**/**.html"]),
 			SortCss({

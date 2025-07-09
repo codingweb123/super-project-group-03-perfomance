@@ -8,7 +8,9 @@ openBtn.addEventListener("click", () => {
 })
 
 burgerMenu.addEventListener("click", element => {
-	element.preventDefault()
+	if (element.getAttribute("href").contains("#")) {
+		element.preventDefault()
+	}
 	let menuBtn = element.target
 
 	if (menuBtn.nodeName === "use" || menuBtn.nodeName === "svg") {
@@ -21,8 +23,5 @@ burgerMenu.addEventListener("click", element => {
 	if (menuBtn.classList.contains("menu-nav-link")) {
 		menuOverlay.classList.remove("is-open")
 		document.body.style.overflow = "unset"
-		document.querySelector(menuBtn.getAttribute("href")).scrollIntoView({
-			behavior: "smooth",
-		})
 	}
 })
