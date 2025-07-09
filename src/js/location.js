@@ -1,5 +1,3 @@
-import gsap from "gsap"
-
 document.addEventListener("DOMContentLoaded", () => {
 	setTimeout(() => {
 		document
@@ -19,8 +17,8 @@ window.addEventListener("scroll", () => {
 })
 
 scrollBtn.addEventListener("click", () => {
-	gsap.to(window, {
-		duration: 0.7,
-		ease: "power1.inOut",
+	scrollTo({
+		top: 0,
+		behavior: "smooth",
 	})
 })

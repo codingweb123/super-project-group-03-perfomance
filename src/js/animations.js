@@ -10,7 +10,6 @@ document.querySelectorAll("a[href]").forEach(c => {
 		t.getAttribute("href").includes("#") &&
 			"#" != t.getAttribute("href") &&
 			(e.preventDefault(),
-			console.log("gsap"),
 			gsap.to(window, {
 				duration: 0.7,
 				ease: "power1.inOut",
