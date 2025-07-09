@@ -1,2 +1,0 @@
-import{S as t,N as a,A as r,K as s}from"./vendor-BDDvTSZg.js";document.addEventListener("DOMContentLoaded",()=>{setTimeout(()=>{document.querySelectorAll("img[data-src]").forEach(e=>e.setAttribute("src",e.dataset.src)),document.querySelectorAll("source[data-srcset]").forEach(e=>e.setAttribute("srcset",e.dataset.srcset))},800)});new t(".hero .swiper",{modules:[a,r,s],slidesPerView:1,spaceBetween:20,keyboard:{enabled:!0},autoplay:{delay:3e3,disableOnInteraction:!0},navigation:{nextEl:".right-btn",prevEl:".left-btn"}});
-//# sourceMappingURL=hero-DqSXfQWP.js.map
