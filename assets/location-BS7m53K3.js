@@ -1,0 +1,2 @@
+document.addEventListener("DOMContentLoaded",()=>{setTimeout(()=>{document.querySelectorAll("iframe[data-src]").forEach(t=>t.setAttribute("src",t.dataset.src))},800)});const e=document.querySelector("#scrollToTopBtn");window.addEventListener("scroll",()=>{scrollY>300?e.classList.add("show"):e.classList.remove("show")});e.addEventListener("click",()=>{scrollTo({top:0,behavior:"smooth"})});
+//# sourceMappingURL=location-BS7m53K3.js.map
