@@ -19,30 +19,15 @@ document.querySelectorAll("a[href]").forEach(c => {
 })
 
 let tl = gsap.timeline({ ease: "power1.inOut" })
-tl.from("header", { y: -40, opacity: 0.5 }),
-	tl.from("header .header-logo", { y: -5, opacity: 0, duration: 0.15 })
+tl.from("header", { y: -40, opacity: 0.5 })
+tl.from("header .header-logo", { y: -5, opacity: 0, duration: 0.1 })
 for (let e = 1; e < 6; e++)
 	tl.from(`header .header-nav-list .header-nav-item:nth-child(${e})`, {
 		x: -5,
 		y: -15,
 		opacity: 0,
-		duration: 0.15,
+		duration: 0.1,
 	})
-let tl2 = gsap.timeline({ ease: "power1.inOut" })
-tl2.from(".hero img", { x: -45, opacity: 0, duration: 0.15 })
-tl2.from(".hero h2", { y: -115, opacity: 0, duration: 0.4 })
-tl2.from(".hero .banner-btn", { x: -45, opacity: 0, duration: 0.3 })
-tl2.from(".hero h1", { y: -115, opacity: 0, duration: 0.4 })
-tl2.from(".hero .left-btn", {
-	y: -40,
-	opacity: 0,
-	duration: 0.15,
-})
-tl2.from(".hero .right-btn", {
-	y: -40,
-	opacity: 0,
-	duration: 0.15,
-})
 let feedbacksTL = gsap.timeline({
 	scrollTrigger: {
 		trigger: ".feedbacks",
@@ -163,7 +148,7 @@ let footerTL = gsap.timeline({
 })
 footerTL.from(".footer .footer-logo", { y: -5, opacity: 0, duration: 0.15 })
 for (let e = 1; e < 5; e++)
-	tl.from(`.footer .footer-nav-item:nth-child(${e})`, {
+	footerTL.from(`.footer .footer-nav-item:nth-child(${e})`, {
 		x: -5,
 		y: -15,
 		opacity: 0,
